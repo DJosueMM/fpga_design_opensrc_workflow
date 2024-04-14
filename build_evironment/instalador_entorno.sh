@@ -22,7 +22,7 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo -e 'if command -v pyenv 1 >/dev/null 2>&1; then \n eval "$(pyenv init -)"\nfi' >> ~/.bashrc
 
-/.bashrc
+source ~/.bashrc
 
 # Paso 4: Instalar Python 3.9.13
 pyenv install 3.9.13
@@ -60,5 +60,9 @@ sudo apt-get install -y iverilog
 
 # Paso 10: Instalar gtkwave
 sudo apt-get install -y gtkwave
+
+# Eliminar repositorios clonados
+echo "Eliminando repositorios clonados..."
+rm -rf yosys nextpnr openFPGALoader
 
 echo "¡Instalación completada!"
